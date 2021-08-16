@@ -164,6 +164,8 @@ function createSvgSprite() {
         .pipe(cheerio({
 			run: function ($) {
 				$('[fill]').removeAttr('fill');
+                $('[class]').removeAttr('class');
+                $('[data-name]').removeAttr('data-name');
 				$('[style]').removeAttr('style');
 			},
 			parserOptions: { xmlMode: true }
