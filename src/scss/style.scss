@@ -1,3 +1,12 @@
 @import "./parts/_themes.scss";
 @import "./parts/_fonts.scss";
 @import "./parts/_main.scss";
+
+@import "./components/_header.scss";
+
+.site-container {
+    width: 100%;
+    max-width: 1260px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
