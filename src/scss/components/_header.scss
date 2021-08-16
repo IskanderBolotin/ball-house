@@ -1,0 +1,23 @@
+.mainHeader__top {
+    background-color: $dark-c;
+    padding: 10px 0;
+    color: #fff;
+    .headerline {
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+.mainHeader__mid {
+    padding: 10px 0;
+}
+.headerline {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+}
+.headerline__item {
+    padding: 0 10px;
+    &.headerline__item-grow {
+        flex-grow: 1;
+    }
+}
