@@ -94,12 +94,12 @@ input[type=number] {
 }
 
 *::-moz-selection {
-    background-color: #be97c0;
+    background-color: $dark-c;
     color: #fff;
 }
 
 *::selection {
-    background-color: #be97c0;
+    background-color: $dark-c;
     color: #fff;
 }
 
