@@ -14,10 +14,12 @@ let path = {
     src: {
         html: [source_folder + "/*.html", "!" + source_folder + "/_*.html"],
         css: source_folder + "/scss/style.scss",
+        css_libs: source_folder + "/scss/libs/**/*.css",
         js: source_folder + "/js/script.js",
+        js_libs: source_folder + "/js/libs/**/*.js",
         img: source_folder + "/img/**/*.{jpg, png, gif, ico, webp}",
         svg: source_folder + "/img/svg/*.svg",
-        fonts: source_folder + "/fonts/*.ttf",
+        fonts: source_folder + "/fonts/**/*",
     },
     watch: {
         html: source_folder + "/**/*.html",
@@ -64,6 +66,15 @@ function html() {
         .pipe(dest(path.build.html))
         .pipe(browsersync.stream());
 }
+function js_libs() {
+    return src(path.src.js_libs)
+        .pipe(dest(path.build.js))
+}
+function css_libs() {
+    return src(path.src.css_libs)
+        .pipe(dest(path.build.css))
+}
+
 function js() {
     return src(path.src.js)
         .pipe(fileinclude())
@@ -136,7 +147,7 @@ function images() {
         .pipe(dest(path.build.img))
         .pipe(browsersync.stream());
 }
-function fonts() {
+function fontsOptimization() {
     src(path.src.fonts)
         .pipe(dest(path.build.fonts))
         .pipe(src(path.src.fonts))
@@ -146,6 +157,10 @@ function fonts() {
         .pipe(dest(path.build.fonts))
         .pipe(src(path.src.fonts))
         .pipe(ttf2woff2())
+        .pipe(dest(path.build.fonts))
+}
+function fonts() {
+    return src(path.src.fonts)
         .pipe(dest(path.build.fonts))
 }
 function createSvgSprite() {
@@ -191,13 +206,16 @@ function watchFiles() {
 function clean() {
     return del(path.clean);
 }
-let build = gulp.series(clean, createSvgSprite, gulp.parallel(js, css, html, images, svgImg));
+let build = gulp.series(clean, createSvgSprite, gulp.parallel(css_libs, js_libs, js, css, html, images, svgImg, fonts));
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
 // команды для gulp
-// Новые изменения в сборке
-exports.svgSprite = createSvgSprite;
+exports.createSvgSprite = createSvgSprite;
+exports.clean = clean;
+exports.css_libs = css_libs;
+exports.js_libs = js_libs;
 exports.fonts = fonts;
+exports.fontsOptimization = fontsOptimization;
 exports.svgImg = svgImg;
 exports.images = images;
 exports.js = js;
