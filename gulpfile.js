@@ -17,7 +17,7 @@ let path = {
         css_libs: source_folder + "/scss/libs/**/*.css",
         js: source_folder + "/js/script.js",
         js_libs: source_folder + "/js/libs/**/*.js",
-        img: source_folder + "/img/**/*.{jpg, png, gif, ico, webp}",
+        img: source_folder + "/img/**/*.{jpg,png,gif,ico,webp}",
         svg: source_folder + "/img/svg/*.svg",
         fonts: source_folder + "/fonts/**/*",
     },
@@ -25,7 +25,7 @@ let path = {
         html: source_folder + "/**/*.html",
         css: source_folder + "/scss/**/*.scss",
         js: source_folder + "/js/**/*.js",
-        img: source_folder + "/img/**/*.{jpg, png, gif, ico, webp}",
+        img: source_folder + "/img/**/*.{jpg,png,gif,ico,webp}",
         svg: source_folder + "/img/svg/*.svg",
     },
     clean: "./" + project_folder + "/"
