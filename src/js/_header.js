@@ -47,14 +47,28 @@ $(document).ready(function() {
     $("body").on("click", "[data-catalog-btn]", function() {
         if ($(this).hasClass("__active")) {
             $(this).removeClass("__active");
+            $("body").removeClass("overflow-hidden");
             $(this).parents("[data-catalog-component]").removeClass("__active");
         }
         else {
             $(this).addClass("__active");
+            $("body").addClass("overflow-hidden");
             $(this).parents("[data-catalog-component]").addClass("__active");
         }
     });
     
-    
+    $("body").on("mouseenter", "[data-catalog-point]", function() {
+        let this_id = $(this).attr("data-catalog-point");
+        $(this).parents("[data-catalog-main]").find("[data-catalog-point]").removeClass("__active");
+        $(this).addClass("__active");
+        $(this).parents("[data-catalog-main]").find("[data-catalog-dd]").each(function() {
+            if ($(this).attr("data-catalog-dd") == this_id) {
+                $(this).addClass("__active");
+            }
+            else {
+                $(this).removeClass("__active");
+            }
+        })
+    });
     
 });
