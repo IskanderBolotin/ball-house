@@ -52,6 +52,7 @@
 .mainMenu__link {
     font-size: 15.5px;
     line-height: 20px;
+    font-weight: 500;
     &:hover {
         color: $white-hover;
     }
@@ -66,6 +67,7 @@
 }
 .headContact__extra {
     margin-left: 5px;
+    font-weight: 500;
 }
 .headContact__icon {
     width: 20px;
@@ -435,4 +437,213 @@ input.searchComponent__input {
 }
 .dropMenuList__item.__active > .dropMenuList__ii {
     display: block;
+}
+.headerCatalog {
+    &.__active {
+        .headerCatalog__collapsed {
+            display: block;
+        }
+    }
+}
+.headerCatalog__collapsed {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 105px);
+    z-index: 15;
+    padding-top: 10px;
+}
+.catalogDropdown {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #f4f2f4 50%, #fff 50%);
+    .site-container {
+        height: 100%;
+    }
+}
+.catalogDropdown__inner {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
+}
+.catalogDropdown__item {
+    height: 100%;
+}
+.catalogDropdown__side {
+    background-color: #f4f2f4;
+    width: calc(397px + 50vw - 600px);
+    min-width: calc(397px + 50vw - 600px);
+}
+.catalogDropdown__main {
+    flex-grow: 1;
+    padding-right: calc(50vw - 600px);
+    max-width: calc(50vw - 397px + 600px);
+    background-color: #fff;
+}
+.headCatBar {
+    overflow: auto;
+    max-height: 100%;
+    padding-top: 26px;
+}
+.headCatBar__menu {
+    padding-bottom: 26px;
+}
+.headCatList {
+    list-style: none;
+}
+.headCatBar__bottom {
+    padding-left: calc(50vw - 600px);
+}
+.headCCmenu {
+    border-top: 2px solid #cdcccd;
+    padding-top: 26px;
+}
+.headCatlink {
+    display: flex;
+    align-items: center;
+    padding-left: calc(50vw - 600px);
+    min-height: 63px;
+    transition: .25s color, .25s background-color;
+    &.__active {
+        background-color: $dark-c;
+        .headCatArr svg,
+        .headCatlink__ico svg {
+            fill: #fff;
+        }
+        .headCatlink__text {
+            color: #fff;
+        }
+    }
+}
+.headCatlink__arrow {
+    align-self: stretch;
+    width: 46px;
+    min-width: 46px;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+}
+.headCatArr {
+    flex-grow: 1;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    .headCatArr__inner {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    svg {
+        transform: scale(-1, 1);
+        display: block;
+        fill: $light-c;
+        transition: .25s fill;
+    }
+}
+.headCatlink__ico {
+    min-width: 41px;
+    width: 41px;
+    height: 31px;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    margin-right: 20px;
+    svg {
+        fill: $light-c;
+        display: block;
+        max-width: 100%;
+        max-height: 100%;
+        transition: .25s fill;
+    }
+}
+.headCatlink__text {
+    flex-grow: 1;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    margin-right: 10px;
+    transition: .25s color;
+}
+.headCCmenuList {
+    list-style: none;
+    margin-bottom: 43px;
+}
+.headCCmenuList__link {
+    font-size: 15.5px;
+    line-height: 20px;
+    font-weight: 500;
+    &:hover {
+        color: $dark-c;
+    }
+}
+.headCCmenuList__item {
+    margin-bottom: 19px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+.headCCmenu__ai:not(:last-child) {
+    margin-bottom: 17px;
+}
+.headCCmenu__activity {
+    margin-bottom: 45px;
+}
+.headCCmenu__tel {
+    margin-bottom: 26px;
+    .headContact__icon svg {
+        fill: $dark-c;
+    }
+    .headContact__link {
+        font-size: 15.5px;
+        &:hover {
+            color: $dark-c;
+            .headContact__icon svg {
+                fill: $dark-c;
+            }
+        }
+    }
+}
+.headCCmenu__btn {
+    padding-bottom: 20px;
+}
+.catalogDropMain {
+    padding-left: 40px;
+    padding-top: 10px;
+    max-height: 100%;
+    overflow: auto;
+}
+.catalogDropItem {
+    display: none;
+    &.__active {
+        display: block;
+    }
+}
+.catalogDropItem__top {
+    padding-bottom: 18px;
+}
+.catalogDropItem__ti {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.dropdownCat {
+    column-count: 3;
+    list-style: none;
+}
+.dropdownCat__item {
+    break-inside: avoid;
+    margin-bottom: 19px;
+}
+.dropdownCat__link {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    &:hover {
+        color: $dark-c;
+    }
 }
