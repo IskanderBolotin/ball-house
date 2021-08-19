@@ -19,7 +19,8 @@ let path = {
         js_libs: source_folder + "/js/libs/**/*.js",
         img: source_folder + "/img/**/*.{jpg,png,gif,ico,webp}",
         svg: source_folder + "/img/svg/*.svg",
-        fonts: source_folder + "/fonts/**/*",
+        fonts: source_folder + "/fonts/*",
+        fonts_opt: source_folder + "/fonts/optimization/**/*",
     },
     watch: {
         html: source_folder + "/**/*.html",
@@ -136,26 +137,26 @@ function images() {
         )
         .pipe(dest(path.build.img))
         .pipe(src(path.src.img))
-        .pipe(
-            imagemin({
-               progressive: true,
-               svgoPlugins: [{removeViewBox: false}],
-               interlaced: true,
-               optimizationLevel: 3 
-            })
-        )
+        // .pipe(
+        //     imagemin({
+        //        progressive: true,
+        //        svgoPlugins: [{removeViewBox: false}],
+        //        interlaced: true,
+        //        optimizationLevel: 3 
+        //     })
+        // )
         .pipe(dest(path.build.img))
         .pipe(browsersync.stream());
 }
 function fontsOptimization() {
-    src(path.src.fonts)
+    src(path.src.fonts_opt)
         .pipe(dest(path.build.fonts))
-        .pipe(src(path.src.fonts))
+        .pipe(src(path.src.fonts_opt))
         .pipe(ttf2woff())
         .pipe(dest(path.build.fonts))
-    return src(path.src.fonts)
+    return src(path.src.fonts_opt)
         .pipe(dest(path.build.fonts))
-        .pipe(src(path.src.fonts))
+        .pipe(src(path.src.fonts_opt))
         .pipe(ttf2woff2())
         .pipe(dest(path.build.fonts))
 }
@@ -206,7 +207,7 @@ function watchFiles() {
 function clean() {
     return del(path.clean);
 }
-let build = gulp.series(clean, createSvgSprite, gulp.parallel(css_libs, js_libs, js, css, html, images, svgImg, fonts));
+let build = gulp.series(clean, createSvgSprite, gulp.parallel(css_libs, js_libs, js, css, html, images, svgImg, fonts, fontsOptimization));
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
 // команды для gulp
