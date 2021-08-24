@@ -102,15 +102,31 @@
         </div>
     </div>
     <div class="mainHeader__mid">
-        <div class="headerRel">
+        <div class="headerRel" data-mobile-control>
             <div class="site-container">
                 <div class="headerline">
-                    <div class="headerline__item">
-                        <a class="logoLink" href="/">
-                            <img src="./img/Logo.png" alt="">
-                        </a>
+                    <div class="headerline__item headerline__item-mobile headerline__item-icons">
+                        <button class="activityItem">
+                            <span class="activityItem__inner">
+                                <span class="activityItem__ico">
+                                    <svg width="20px" height="20px">
+                                        <use xlink:href="/icons/stack/icons.svg#tel"></use>
+                                    </svg>
+                                </span>
+                            </span>
+                        </button>
                     </div>
                     <div class="headerline__item">
+                        <a class="logoLink" href="/">
+                            <div class="logoLink__Desktop">
+                                <img src="./img/Logo.png" alt="">
+                            </div>
+                            <div class="logoLink__mobile">
+                                <img src="./img/svg/logo-mobile.svg" alt="">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="headerline__item headerline__item-header">
                         <div class="headerCatalog" data-catalog-component>
                             <div class="headerCatalog__btn">
                                 <button class="catalogBtn" data-catalog-btn>
@@ -138,6 +154,9 @@
                                     <div class="catalogDropdown__inner">
                                         <div class="catalogDropdown__item catalogDropdown__side">
                                             <div class="headCatBar">
+                                                <div class="headCatBar__title">
+                                                    Каталог
+                                                </div>
                                                 <div class="headCatBar__menu">
                                                     <ul class="headCatList">
                                                         <li class="headCatList__item">
@@ -293,9 +312,15 @@
                                                                 <a class="headCCmenuList__link" href="">Акции</a>
                                                             </li>
                                                             <li class="headCCmenuList__item">
+                                                                <a class="headCCmenuList__link" href="">Отзывы</a>
+                                                            </li>
+                                                            <li class="headCCmenuList__item">
                                                                 <a class="headCCmenuList__link" href="">Наши работы</a>
                                                             </li>
                                                         </ul>
+                                                        <div class="headCatBar__title">
+                                                            Связаться с нами
+                                                        </div>
                                                         <div class="headCCmenu__activity">
                                                             <div class="headCCmenu__ai">
                                                                 <button class="activityItem">
@@ -349,6 +374,45 @@
                                                                 <span class="customBtn__inner">Заказать звонок</span>
                                                             </button>
                                                         </div>
+                                                        <div class="headCCmenu__social">
+                                                            <ul class="socialList">
+                                                                <li class="socialList__item">
+                                                                    <a class="socialLink" href="">
+                                                                        <svg width="18px" height="18px">
+                                                                            <use xlink:href="/icons/stack/icons.svg#inst"></use>
+                                                                        </svg>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="socialList__item">
+                                                                    <a class="socialLink" href="">
+                                                                        <svg width="24px" height="14px">
+                                                                            <use xlink:href="/icons/stack/icons.svg#vk"></use>
+                                                                        </svg>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="socialList__item">
+                                                                    <a class="socialLink" href="">
+                                                                        <svg width="12px" height="20px">
+                                                                            <use xlink:href="/icons/stack/icons.svg#ok"></use>
+                                                                        </svg>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="socialList__item">
+                                                                    <a class="socialLink" href="">
+                                                                        <svg width="21px" height="21px">
+                                                                            <use xlink:href="/icons/stack/icons.svg#whatsup"></use>
+                                                                        </svg>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="socialList__item">
+                                                                    <a class="socialLink" href="">
+                                                                        <svg width="18px" height="19px">
+                                                                            <use xlink:href="/icons/stack/icons.svg#viber"></use>
+                                                                        </svg>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -356,6 +420,32 @@
                                         <div class="catalogDropdown__item catalogDropdown__main">
                                             <div class="catalogDropMain">
                                                 <div class="catalogDropItem __active" data-catalog-dd="1">
+                                                    <div class="catalogDropItem__header">
+                                                        <div class="catalogDropItem__name">
+                                                            <div class="headCatlink">
+                                                                <div class="headCatlink__ico">
+                                                                    <svg width="37px" height="31px">
+                                                                        <use xlink:href="/icons/stack/icons.svg#Vozdushnie"></use>
+                                                                    </svg>
+                                                                </div>
+                                                                <div class="headCatlink__text">
+                                                                    Воздушные шары
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="catalogDropItem__back">
+                                                            <button class="catalogDB" data-catlog-back>
+                                                                <span class="catalogDB__inner">
+                                                                    <span class="catalogDB__ico">
+                                                                        <svg width="6px" height="10px">
+                                                                            <use xlink:href="/icons/stack/icons.svg#chev"></use>
+                                                                        </svg>
+                                                                    </span>
+                                                                    Назад
+                                                                </span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
                                                     <div class="catalogDropItem__top">
                                                         <div class="catalogDropItem__ti">
                                                             <button class="closeBtn" data-catalo-dd-close>
@@ -544,6 +634,32 @@
                                                     </div>
                                                 </div>
                                                 <div class="catalogDropItem" data-catalog-dd="2">
+                                                    <div class="catalogDropItem__header">
+                                                        <div class="catalogDropItem__name">
+                                                            <div class="headCatlink">
+                                                                <div class="headCatlink__ico">
+                                                                    <svg width="37px" height="31px">
+                                                                        <use xlink:href="/icons/stack/icons.svg#Vozdushnie"></use>
+                                                                    </svg>
+                                                                </div>
+                                                                <div class="headCatlink__text">
+                                                                    Воздушные шары
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="catalogDropItem__back">
+                                                            <button class="catalogDB" data-catlog-back>
+                                                                <span class="catalogDB__inner">
+                                                                    <span class="catalogDB__ico">
+                                                                        <svg width="6px" height="10px">
+                                                                            <use xlink:href="/icons/stack/icons.svg#chev"></use>
+                                                                        </svg>
+                                                                    </span>
+                                                                    Назад
+                                                                </span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
                                                     <div class="catalogDropItem__top">
                                                         <div class="catalogDropItem__ti">
                                                             <button class="closeBtn" data-catalo-dd-close>
@@ -732,6 +848,32 @@
                                                     </div>
                                                 </div>
                                                 <div class="catalogDropItem" data-catalog-dd="3">
+                                                    <div class="catalogDropItem__header">
+                                                        <div class="catalogDropItem__name">
+                                                            <div class="headCatlink">
+                                                                <div class="headCatlink__ico">
+                                                                    <svg width="37px" height="31px">
+                                                                        <use xlink:href="/icons/stack/icons.svg#Vozdushnie"></use>
+                                                                    </svg>
+                                                                </div>
+                                                                <div class="headCatlink__text">
+                                                                    Воздушные шары
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="catalogDropItem__back">
+                                                            <button class="catalogDB" data-catlog-back>
+                                                                <span class="catalogDB__inner">
+                                                                    <span class="catalogDB__ico">
+                                                                        <svg width="6px" height="10px">
+                                                                            <use xlink:href="/icons/stack/icons.svg#chev"></use>
+                                                                        </svg>
+                                                                    </span>
+                                                                    Назад
+                                                                </span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
                                                     <div class="catalogDropItem__top">
                                                         <div class="catalogDropItem__ti">
                                                             <button class="closeBtn" data-catalo-dd-close>
@@ -767,6 +909,32 @@
                                                     </div>
                                                 </div>
                                                 <div class="catalogDropItem" data-catalog-dd="4">
+                                                    <div class="catalogDropItem__header">
+                                                        <div class="catalogDropItem__name">
+                                                            <div class="headCatlink">
+                                                                <div class="headCatlink__ico">
+                                                                    <svg width="37px" height="31px">
+                                                                        <use xlink:href="/icons/stack/icons.svg#Vozdushnie"></use>
+                                                                    </svg>
+                                                                </div>
+                                                                <div class="headCatlink__text">
+                                                                    Воздушные шары
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="catalogDropItem__back">
+                                                            <button class="catalogDB" data-catlog-back>
+                                                                <span class="catalogDB__inner">
+                                                                    <span class="catalogDB__ico">
+                                                                        <svg width="6px" height="10px">
+                                                                            <use xlink:href="/icons/stack/icons.svg#chev"></use>
+                                                                        </svg>
+                                                                    </span>
+                                                                    Назад
+                                                                </span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
                                                     <div class="catalogDropItem__top">
                                                         <div class="catalogDropItem__ti">
                                                             <button class="closeBtn" data-catalo-dd-close>
@@ -802,6 +970,32 @@
                                                     </div>
                                                 </div>
                                                 <div class="catalogDropItem" data-catalog-dd="5">
+                                                    <div class="catalogDropItem__header">
+                                                        <div class="catalogDropItem__name">
+                                                            <div class="headCatlink">
+                                                                <div class="headCatlink__ico">
+                                                                    <svg width="37px" height="31px">
+                                                                        <use xlink:href="/icons/stack/icons.svg#Vozdushnie"></use>
+                                                                    </svg>
+                                                                </div>
+                                                                <div class="headCatlink__text">
+                                                                    Воздушные шары
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="catalogDropItem__back">
+                                                            <button class="catalogDB" data-catlog-back>
+                                                                <span class="catalogDB__inner">
+                                                                    <span class="catalogDB__ico">
+                                                                        <svg width="6px" height="10px">
+                                                                            <use xlink:href="/icons/stack/icons.svg#chev"></use>
+                                                                        </svg>
+                                                                    </span>
+                                                                    Назад
+                                                                </span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
                                                     <div class="catalogDropItem__top">
                                                         <div class="catalogDropItem__ti">
                                                             <button class="closeBtn" data-catalo-dd-close>
@@ -837,6 +1031,32 @@
                                                     </div>
                                                 </div>
                                                 <div class="catalogDropItem" data-catalog-dd="6">
+                                                    <div class="catalogDropItem__header">
+                                                        <div class="catalogDropItem__name">
+                                                            <div class="headCatlink">
+                                                                <div class="headCatlink__ico">
+                                                                    <svg width="37px" height="31px">
+                                                                        <use xlink:href="/icons/stack/icons.svg#Vozdushnie"></use>
+                                                                    </svg>
+                                                                </div>
+                                                                <div class="headCatlink__text">
+                                                                    Воздушные шары
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="catalogDropItem__back">
+                                                            <button class="catalogDB" data-catlog-back>
+                                                                <span class="catalogDB__inner">
+                                                                    <span class="catalogDB__ico">
+                                                                        <svg width="6px" height="10px">
+                                                                            <use xlink:href="/icons/stack/icons.svg#chev"></use>
+                                                                        </svg>
+                                                                    </span>
+                                                                    Назад
+                                                                </span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
                                                     <div class="catalogDropItem__top">
                                                         <div class="catalogDropItem__ti">
                                                             <button class="closeBtn" data-catalo-dd-close>
@@ -872,6 +1092,32 @@
                                                     </div>
                                                 </div>
                                                 <div class="catalogDropItem" data-catalog-dd="7">
+                                                    <div class="catalogDropItem__header">
+                                                        <div class="catalogDropItem__name">
+                                                            <div class="headCatlink">
+                                                                <div class="headCatlink__ico">
+                                                                    <svg width="37px" height="31px">
+                                                                        <use xlink:href="/icons/stack/icons.svg#Vozdushnie"></use>
+                                                                    </svg>
+                                                                </div>
+                                                                <div class="headCatlink__text">
+                                                                    Воздушные шары
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="catalogDropItem__back">
+                                                            <button class="catalogDB" data-catlog-back>
+                                                                <span class="catalogDB__inner">
+                                                                    <span class="catalogDB__ico">
+                                                                        <svg width="6px" height="10px">
+                                                                            <use xlink:href="/icons/stack/icons.svg#chev"></use>
+                                                                        </svg>
+                                                                    </span>
+                                                                    Назад
+                                                                </span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
                                                     <div class="catalogDropItem__top">
                                                         <div class="catalogDropItem__ti">
                                                             <button class="closeBtn" data-catalo-dd-close>
@@ -913,7 +1159,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="headerline__item headerline__item-grow">
+                    <div class="headerline__item headerline__item-grow headerline__item-search" data-search-mobile>
                         <div class="searchComponent" data-search-component>
                             <div class="searchComponent__inner">
                                 <div class="searchComponent__field">
@@ -942,10 +1188,21 @@
                             </div>
                         </div>
                     </div>
-                    <div class="headerline__item">
+                    <div class="headerline__item headerline__item-mobile headerline__item-icons">
+                        <button class="activityItem" data-search-mobile-open>
+                            <span class="activityItem__inner">
+                                <span class="activityItem__ico">
+                                    <svg width="20px" height="20px">
+                                        <use xlink:href="/icons/stack/icons.svg#search"></use>
+                                    </svg>
+                                </span>
+                            </span>
+                        </button>
+                    </div>
+                    <div class="headerline__item headerline__item-icons">
                         <div class="headerActivity">
                             <div class="headerActivity__inner">
-                                <div class="headerActivity__item">
+                                <div class="headerActivity__item headerActivity__item-pa">
                                     <button class="activityItem">
                                         <span class="activityItem__inner">
                                             <span class="activityItem__ico">
@@ -957,7 +1214,7 @@
                                         </span>
                                     </button>
                                 </div>
-                                <div class="headerActivity__item">
+                                <div class="headerActivity__item headerActivity__item-cart">
                                     <a class="activityItem" href="/basket.html">
                                         <span class="activityItem__inner">
                                             <span class="activityItem__ico">

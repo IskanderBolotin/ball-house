@@ -1,0 +1,112 @@
+<div class="productItem">
+    <div class="productItem__inner">
+        <div class="productItem__img">
+            <a class="productView" href="">
+                <div class="productView__inner">
+                    <img src="@@img.src" alt="">
+                </div>
+            </a>
+        </div>
+        <div class="productItem__name">
+            <a href="" class="productName">
+                @@name
+            </a>
+        </div>
+        <div class="productItem__offers">
+            <div class="offersList">
+                <div class="offersList__item">
+                    <div class="offerBlock">
+                        <div class="offerBlock__top">
+                            <button class="offerBlock__btn">15 шт.</button>
+                        </div>
+                        <div class="offerBlock__bot">
+                            <div class="offerBlock__price">11250 ₽</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="offersList__item">
+                    <div class="offerBlock">
+                        <div class="offerBlock__top">
+                            <button class="offerBlock__btn">25 шт.</button>
+                        </div>
+                        <div class="offerBlock__bot">
+                            <div class="offerBlock__price">18750 ₽</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="offersList__item">
+                    <div class="offerBlock">
+                        <div class="offerBlock__top">
+                            <button class="offerBlock__btn">50 шт.</button>
+                        </div>
+                        <div class="offerBlock__bot">
+                            <div class="offerBlock__price">37500 ₽</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="offersList__item">
+                    <div class="offerBlock">
+                        <div class="offerBlock__top">
+                            <button class="offerBlock__btn">100 шт.</button>
+                        </div>
+                        <div class="offerBlock__bot">
+                            <div class="offerBlock__price">700000 ₽</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="productItem__count">
+            <div class="productCount">
+                <div class="productCount__item productCount__item-counter">
+                    <div class="counterEl" data-counter data-counter-step="1" data-counter-min="1" data-counter-max="1">
+                        <div class="counterEl__inner">
+                            <div class="counterEl__btn">
+                                <button class="counterBtn counterBtn-min" data-counter-btn="min">-</button>
+                            </div>
+                            <div class="counterEl__field">
+                                <input class="counterInp" pdata-counter-input type="number" name="" id="" value="1">
+                            </div>
+                            <div class="counterEl__btn">
+                                <button class="counterBtn counterBtn-max" data-counter-btn="max">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="productCount__item">
+                    <div class="productPrice">
+                        <div class="productPrice__cur">
+                            @@price.cur
+                        </div>
+                        @@if (price.twice === 'true') {
+                            <div class="productPrice__old">
+                                @@price.old
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="productItem__btn">
+            <div class="productBtns">
+                <div class="productBtns__item productBtns__item-tobasket">
+                    <button class="customBtn customBtn-light to-basket" data-modal-open="1" data-add-to-basket="">
+                        <span class="customBtn__inner">
+                            <span class="customBtn__adapt">
+                                <svg width="18px" height="21px">
+                                    <use xlink:href="/icons/stack/icons.svg#cart"></use>
+                                </svg>
+                            </span>
+                            <span class="customBtn__txt">В корзину</span>
+                        </span>
+                    </button>
+                </div>
+                <div class="productBtns__item">
+                    <button class="customBtn">
+                        <span class="customBtn__inner">Купить в 1 клик</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
