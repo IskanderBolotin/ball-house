@@ -1631,12 +1631,16 @@ li.filterList__item:not(:last-child) {
         padding: 0 7px;
     }
     .orderGrid,
-    .switchBox__inner {
+    .switchBox__inner,
+    .formArea__inner,
+    .persoanBox__inner {
         margin-left: -7px;
         margin-right: -7px;
     }
     .orderGrid__item,
-    .switchBox__item {
+    .switchBox__item,
+    .formArea__item,
+    .persoanBox__item {
         padding-left: 7px;
         padding-right: 7px;
     }
@@ -1814,6 +1818,9 @@ li.filterList__item:not(:last-child) {
             display: block;
         }
     }
+    .filterComponent__collapsed {
+        overflow: auto;
+    }
     .filterComponent__collapsed,
     .sortingArea {
         position: fixed;
@@ -1825,6 +1832,7 @@ li.filterList__item:not(:last-child) {
         background-color: #fff;
     }
     .filterDrop__body {
+        max-height: calc(100vh - 98px);
         height: calc(100vh - 98px);
         overflow: auto;
         margin-bottom: 0;
