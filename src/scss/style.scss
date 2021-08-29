@@ -495,6 +495,7 @@ h2, .title-h2 {
     left: 0;
     width: 100%;
     height: 100vh;
+    height: -webkit-fill-available;
     background-color: rgba(30, 24, 30, .7);
     z-index: 110;
     overflow: hidden;
@@ -1819,7 +1820,7 @@ li.filterList__item:not(:last-child) {
         }
     }
     .filterComponent__collapsed {
-        overflow: auto;
+        overflow: hidden;
     }
     .filterComponent__collapsed,
     .sortingArea {
@@ -1829,11 +1830,15 @@ li.filterList__item:not(:last-child) {
         z-index: 100;
         width: 100%;
         height: 100vh;
+        height: -webkit-fill-available;
         background-color: #fff;
     }
+    .filterDrop {
+        height: 100%;
+    }
     .filterDrop__body {
-        max-height: calc(100vh - 98px);
-        height: calc(100vh - 98px);
+        max-height: calc(100% - 98px);
+        height: calc(100% - 98px);
         overflow: auto;
         margin-bottom: 0;
         padding-bottom: 13px;
