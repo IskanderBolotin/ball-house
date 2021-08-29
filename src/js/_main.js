@@ -47,16 +47,19 @@ $(document).ready(function(){
                     $(this).find("[data-modal-inner]").removeClass("__active");
                 }
             });
+            $("body").addClass("overflow-hidden");
         }
     });
     $("body").on("click", "[data-modal-cls]", function() {
         $(this).parents("[data-modal]").removeClass("__active");
         $(this).parents("[data-modal]").find("[data-modal-inner]").removeClass("__active");
+        $("body").removeClass("overflow-hidden");
     });
     $("body").on("mousedown", "[data-modal]", function(e) {
         if (!e.target.closest("[data-modal-inner]")) {
             $(this).removeClass("__active");
             $(this).find("[data-modal-inner]").removeClass("__active");
+            $("body").removeClass("overflow-hidden");
         };
     });
     $("body").on("click", "[data-scroll-top]", function(e) {
@@ -66,15 +69,19 @@ $(document).ready(function(){
     
     $("body").on("click", "#open-filter", function(e) {
         $("#collapsed-filter").addClass("__active");
+        $("body").addClass("overflow-hidden");
     })
     $("body").on("click", "#open-sort", function(e) {
         $("#mobile-sort").addClass("__active");
+        $("body").addClass("overflow-hidden");
     })
     $("body").on("click", "[data-cls-sort]", function(e) {
         $("#mobile-sort").removeClass("__active");
+        $("body").removeClass("overflow-hidden");
     });
     $("body").on("click", "[data-cls-filter]", function(e) {
         $("#collapsed-filter").removeClass("__active");
+        $("body").removeClass("overflow-hidden");
     });
     $("body").on("click", "[data-toggle-btn]", function(e) {
         if (!$(this).hasClass("__active")) {

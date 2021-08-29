@@ -1,7 +1,7 @@
 $(document).ready(function() {
     let supportsTouch = ('ontouchstart' in document.documentElement);
     if (supportsTouch || $(window).outerWidth() <= 1024) {
-        $("body").on("click", "[data-catalog-point]", function(e) {
+        $("body").on("click touchend", "[data-catalog-point]", function(e) {
            e.preventDefault();
            let this_id = $(this).attr("data-catalog-point");
             $(this).parents("[data-catalog-main]").find("[data-catalog-point]").removeClass("__active");
