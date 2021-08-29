@@ -67,37 +67,57 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="filterBar__item">
-                                <div class="sortingEl">
-                                    <div class="sortingEl__inner">
-                                        <div class="sortingEl__label">
-                                            Сортировать по
-                                        </div>
-                                        <div class="sortingEl__select sortingEl__select-big">
-                                            <select class="customSelect" name="" id="">
-                                                <option value="">Новинкам</option>
-                                                <option value="">Цене</option>
-                                                <option value="">Алфавиту</option>
-                                                <option value="">Еще пункт</option>
-                                                <option value="">И еще пункт</option>
-                                            </select>
+                            <div class="filterBar__item filterBar__item-sort">
+                                <div class="sortingArea" id="mobile-sort">
+                                    <div class="filterDrop__top">
+                                        <div class="mobileFilterHead">
+                                            <div class="mobileFilterHead__inner">
+                                                <div class="mobileFilterHead__title">Сортировка</div>
+                                                <button class="clsFilt" data-cls-sort>
+                                                    <svg>
+                                                        <use xlink:href="/icons/stack/icons.svg#close"></use>
+                                                    </svg>
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="filterBar__item">
-                                <div class="sortingEl">
-                                    <div class="sortingEl__inner">
-                                        <div class="sortingEl__label">
-                                            Показать по
-                                        </div>
-                                        <div class="sortingEl__select">
-                                            <select class="customSelect" name="" id="">
-                                                <option value="">12</option>
-                                                <option value="">14</option>
-                                                <option value="">16</option>
-                                                <option value="">18</option>
-                                            </select>
+                                    <div class="sortingArea__body">
+                                        <div class="sortingArea__inner">
+                                            <div class="sortingArea__item">
+                                                <div class="sortingEl">
+                                                    <div class="sortingEl__inner">
+                                                        <div class="sortingEl__label">
+                                                            Сортировать по
+                                                        </div>
+                                                        <div class="sortingEl__select sortingEl__select-big">
+                                                            <select class="customSelect" name="" id="">
+                                                                <option value="">Новинкам</option>
+                                                                <option value="">Цене</option>
+                                                                <option value="">Алфавиту</option>
+                                                                <option value="">Еще пункт</option>
+                                                                <option value="">И еще пункт</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="sortingArea__item">
+                                                <div class="sortingEl">
+                                                    <div class="sortingEl__inner">
+                                                        <div class="sortingEl__label">
+                                                            Показать по
+                                                        </div>
+                                                        <div class="sortingEl__select">
+                                                            <select class="customSelect" name="" id="">
+                                                                <option value="">12</option>
+                                                                <option value="">14</option>
+                                                                <option value="">16</option>
+                                                                <option value="">18</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -123,10 +143,52 @@
                                                 </span>
                                             </button>
                                         </div>
-                                        <div class="filterComponent__collapsed"  data-filter-dd>
+                                        <div class="filterComponent__mobile">
+                                            <div class="stikyFilter" id="mobile-filter">
+                                                <div class="mobileFIlterBar">
+                                                    <div class="site-container">
+                                                        <div class="mobileFIlterBar__inner">
+                                                            <div class="mobileFIlterBar__Btn">
+                                                                <button class="filterBtn" id="open-filter">
+                                                                    <span class="filterBtn__inner">
+                                                                        <svg width="20px" height="17px">
+                                                                            <use xlink:href="/icons/stack/icons.svg#filter"></use>
+                                                                        </svg>
+                                                                    </span>
+                                                                </button>
+                                                            </div>
+                                                            <div class="mobileFIlterBar__text">
+                                                                <div class="mainCatalog__q">
+                                                                    <span class="hl">78</span> товаров
+                                                                </div>
+                                                            </div>
+                                                            <div class="mobileFIlterBar__Btn">
+                                                                <button class="filterBtn" id="open-sort">
+                                                                    <span class="filterBtn__inner">
+                                                                        <svg width="16px" height="18px">
+                                                                            <use xlink:href="/icons/stack/icons.svg#sort"></use>
+                                                                        </svg>
+                                                                    </span>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="filterComponent__collapsed"  data-filter-dd id="collapsed-filter">
                                             <div class="filterDrop">
                                                 <div class="filterDrop__top">
-                                                    
+                                                    <div class="mobileFilterHead">
+                                                        <div class="mobileFilterHead__inner">
+                                                            <div class="mobileFilterHead__title">Фильтр</div>
+                                                            <button class="clsFilt" data-cls-filter>
+                                                                <svg>
+                                                                    <use xlink:href="/icons/stack/icons.svg#close"></use>
+                                                                </svg>
+                                                            </button>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                                 <div class="filterDrop__body">
                                                     <div  class="filterDrop__main">

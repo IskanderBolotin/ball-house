@@ -1,0 +1,63 @@
+@@include('./_header.html')
+<main class="siteContent">
+    <div class="breadcrumbsBox">
+        <div class="site-container">
+            <div class="breadcrumbsBox__inner">
+                <ul class="breadcrumbsList">
+                    <li class="breadcrumbsList__item">
+                        <a class="breadcrumbsList__link" href="">Корзина</a>
+                    </li>
+                    <li class="breadcrumbsList__item">
+                        <span class="breadcrumbsList__link">Моя корзина</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <section class="siteSection siteSection-big">
+        <div class="site-container">
+            <h1 class="main-h1">
+                Корзина
+            </h1>
+            <div class="switchBox">
+                <div class="switchBox__main">
+                    <div class="switchBox__inner">
+                        <div class="switchBox__item">
+                            <label class="labelElem">
+                                <span class="labelElem__input">
+                                    <input class="customCheck visually-hidden" type="radio" name="cbs-1" id="" data-switch="1" data-switch-name="sw-1">
+                                    <span class="customCheck__el"></span>
+                                </span>
+                                <span class="labelElem__text">Получать будет другой человек</span>
+                            </label>
+                        </div>
+                        <div class="switchBox__item">
+                            <label class="labelElem">
+                                <span class="labelElem__input">
+                                    <input class="customCheck visually-hidden" type="radio" name="cbs-1" id="" data-switch="2" data-switch-name="sw-1">
+                                    <span class="customCheck__el"></span>
+                                </span>
+                                <span class="labelElem__text">Анонимный заказ</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="switchBox__hiden">
+                    <div class="switchBox__collapsed" data-switch-el="1" data-switch-name="sw-1">
+                        <div class="orderGrid">
+                            <div class="orderGrid__item">
+                                <label class="inputLabel" for="t-1">Имя получателя*</label>
+                                <input class="customInput" type="email" id="t-1">
+                            </div>
+                            <div class="orderGrid__item">
+                                <label class="inputLabel" for="t-2">Телефон*</label>
+                                <input class="customInput" type="tel" id="t-2">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+@@include('./_footer.html')
